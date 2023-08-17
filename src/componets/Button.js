@@ -6,7 +6,6 @@ import classes from './Button.module.css';
 function Button({ value }) {
   let buttonClassName = classes.calcBtns;
 
- 
   if (value === '0' || value === '0') {
     buttonClassName += ` ${classes.res}`;
   } else if (value === 'X' || value === '-' || value === '=' || value === '+') {
