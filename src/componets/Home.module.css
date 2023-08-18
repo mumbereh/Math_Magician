@@ -12,7 +12,6 @@
 }
 
 .inner {
-
   display: flex;
   flex-wrap: wrap;
   height: 309px;
@@ -30,7 +29,7 @@
   margin: auto;
   margin-top: 17px;
   margin-bottom: -66px;
-  background-color:rgb(153, 145, 145);
+  background-color: rgb(153, 145, 145);
   margin-left: 3px;
 }
 
