@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Home.module.css';
 import Button from './Button';
 
-export default function Home() {
+export default function Calclator() {
   const buttons = [
     'AC', '+/-', '%', '+', '7', '8', '9', 'X', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '=',
   ];
