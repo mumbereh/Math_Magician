@@ -12,23 +12,26 @@
 }
 
 .inner {
+
   display: flex;
   flex-wrap: wrap;
-  height: 548px;
+  height: 309px;
   margin: auto;
-  width: 407px;
+  width: 303px;
   border-radius: 30px;
+  margin-top: 97px;
 }
 
 .result {
   font-size: 2rem;
-  width: 293px;
-  height: 51px;
+  width: 291px;
+  height: 44px;
   scrollbar-width: none;
   margin: auto;
-  margin-top: 25px;
+  margin-top: 17px;
   margin-bottom: -66px;
-  background-color: #e4dbdb;
+  background-color:rgb(153, 145, 145);
+  margin-left: 3px;
 }
 
 .resbox {
@@ -40,11 +43,12 @@
 }
 
 .btns {
-  height: 439px;
-  width: 301px;
+  height: 289px;
+  width: 300px;
   display: flex;
   flex-flow: row wrap;
   padding-bottom: 116px;
   margin: auto;
   border: 1px solid #fff;
+  margin-top: 60px;
 }
