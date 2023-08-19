@@ -10,27 +10,34 @@ const Quote = () => {
   const category = 'future';
 
   useEffect(() => {
-    fetch(`https://api.api-ninjas.com/v1/quotes?category=${category}`, {
-      method: 'GET',
-      headers: {
-        'X-Api-Key': apiKey,
-        'Content-Type': 'application/json',
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
+    const fetchQuote = async () => {
+      try {
+        const response = await fetch(
+          `https://api.api-ninjas.com/v1/quotes?category=${category}`,
+          {
+            method: 'GET',
+            headers: {
+              'X-Api-Key': apiKey,
+              'Content-Type': 'application/json',
+            },
+          },
+        );
+
+        const data = await response.json();
+
         if (data.length > 0) {
           setQuote(data[0].quote);
-          setLoading(false);
         } else {
           setError('No quotes found for the specified category.');
-          setLoading(false);
         }
-      })
-      .catch((error) => {
+      } catch (error) {
         setError(`An error occurred while fetching the quote.\n${error}`);
+      } finally {
         setLoading(false);
-      });
+      }
+    };
+
+    fetchQuote();
   }, [category]);
 
   return (
