@@ -8,7 +8,10 @@
   justify-content: center;
   align-items: center;
   height: 96vh;
-  width: 100vw;
+  width: 101vw;
+  margin-left: -1%;
+  margin-top: -26%;
+  background: #d2691e70;
 }
 
 .inner {
@@ -50,6 +53,5 @@
   flex-flow: row wrap;
   padding-bottom: 116px;
   margin: auto;
-  border: 1px solid #fff;
   margin-top: 60px;
 }
