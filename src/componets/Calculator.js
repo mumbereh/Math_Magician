@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import classes from './Home.module.css';
+import styles from './Calculator.module.css';
 import Button from './Button';
 import calculate from '../logic/calculate';
 
-function Calculator() {
+const Calculator = () => {
   const [obj, setObj] = useState({
     total: null,
     next: null,
     operation: null,
   });
+
   const buttons = [
     'AC', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '=',
   ];
@@ -16,13 +17,14 @@ function Calculator() {
   const handleClick = (btn) => {
     setObj(calculate(obj, btn));
   };
+
   return (
-    <div className={classes.home}>
-      <div className={classes.inner}>
-        <div className={classes.result}>
-          <input className={classes.resbox} value={obj.next || obj.total || '0'} />
+    <div className={styles.home}>
+      <div className={styles.inner}>
+        <div className={styles.result}>
+          <input className={styles.resbox} value={obj.next || obj.total || '0'} />
         </div>
-        <div className={classes.btns}>
+        <div className={styles.btns}>
           {buttons.map((value) => (
             <Button
               value={value}
@@ -34,6 +36,6 @@ function Calculator() {
       </div>
     </div>
   );
-}
+};
 
 export default Calculator;
