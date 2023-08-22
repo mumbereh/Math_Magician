@@ -1,6 +1,6 @@
 .quote-section {
   width: 14.7em;
-  margin: -137% auto;
+  margin:  auto;
   padding: 1em;
   border: solid 2px #bbb8b8;
   display: flex;
@@ -11,7 +11,7 @@
 
 .quote-section h2 {
   font-size: 24px;
-  margin-bottom: 15px;
+
 }
 
 .quote-section p {
