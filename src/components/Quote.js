@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Quote.css';
 
 const Quote = () => {
-  const [quote, setQuote] = useState('');
+  const [quoteData, setQuoteData] = useState(null);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
 
@@ -26,7 +26,7 @@ const Quote = () => {
         const data = await response.json();
 
         if (data.length > 0) {
-          setQuote(data[0].quote);
+          setQuoteData(data[0]);
         } else {
           setError('No quotes found for the specified category.');
         }
@@ -45,7 +45,13 @@ const Quote = () => {
       <h2>Quote of the Day</h2>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
-      {!loading && !error && <p>{quote}</p>}
+      {!loading && !error && (
+        <div>
+          <p>{quoteData.quote}</p>
+          <p className="para-quote">- {quoteData.author}</p>
+          <p>{quoteData.date}</p>
+        </div>
+      )}
     </div>
   );
 };
