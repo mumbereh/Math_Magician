@@ -1,10 +1,7 @@
 import React from 'react';
 import './index.css';
 import * as ReactDOM from 'react-dom/client';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './components/reportWebVitals';
 import Quote from './components/Quote';
@@ -23,15 +20,15 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: 'Home/',
+        path: 'home/',
         element: <Home />,
       },
       {
-        path: 'Calculator/',
+        path: 'calculator/',
         element: <Calculator />,
       },
       {
-        path: 'Quotes/',
+        path: 'quotes/',
         element: <Quote />,
       },
     ],
