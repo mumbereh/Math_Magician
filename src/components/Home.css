@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 1em;
+}
+
+.container {
+  margin: 10px;
+}
+
+p {
+  text-align: justify;
+  padding: 1em;
+}
+
+.parag {
+  margin: auto;
+  margin-top: 6px;
+}
+
+.button-section,
+.input-section {
+  max-width: 16.7em;
+}

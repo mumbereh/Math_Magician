@@ -1,13 +1,17 @@
+import React from 'react';
+import { Outlet } from 'react-router-dom';
 import './App.css';
-import Calculator from './componets/Calculator';
-import Quote from './componets/Quote';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <>
-      <Calculator />
-      <Quote />
-    </>
+    <div>
+      <>
+        <Navbar />
+        <Outlet />
+      </>
+    </div>
+
   );
 }
 
